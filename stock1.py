@@ -11,7 +11,7 @@ def loadDataset(filename, split, trainingSet=[], testSet=[]):
         for x in range(len(dataset) - 1):
             for y in range(4):
                 dataset[x][y] = float(dataset[x][y])
-            if random.random() < split:
+            if random.random() < split:  #choose the random number in b/w zero and 1 and see if that is less than split if that is less than split then it transform it into training else it test datase
                 trainingSet.append(dataset[x])
             else:
                 testSet.append(dataset[x])
