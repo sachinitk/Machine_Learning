@@ -6,7 +6,7 @@ import operator
 
 def loadDataset(filename, split, trainingSet=[], testSet=[]):
     with open(filename, 'rb') as csvfile:   #now the file is csv file
-        lines = csv.reader(csvfile)
+        lines = csv.reader(csvfile)   #it willl go line by line and create 4 speate column in this case
         dataset = list(lines)
         for x in range(len(dataset) - 1):
             for y in range(4):
